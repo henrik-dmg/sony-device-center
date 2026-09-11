@@ -51,10 +51,9 @@ no hardware verification or release publication is implied by the automated test
   paths through common macOS aliases. Document canonical paths in native packaging.
   Consider directory-descriptor-relative operations for stronger protection against
   path replacement in exotic, writable custom ancestor directories.
-- **Discovery metadata.** The Linux and macOS connectors list paired and connected
-  devices and set the paired/connected hints. On macOS, `connected` comes from
-  `[isConnected]`, which is NO for headsets that connect only for audio or BLE. The
-  Windows connector lists only connected devices and leaves the hints unknown. `SonyDeviceDiscovery`
+- **Discovery metadata.** All three connectors list paired and connected devices and
+  set the paired/connected hints. On macOS, `connected` comes from `[isConnected]`,
+  which is NO for headsets that connect only for audio or BLE. `SonyDeviceDiscovery`
   keeps a device only when its address prefix (OUI) or its name identifies Sony.
   A renamed device with an address outside the OUI table disappears. Run
   `update_sony_ouis.py` to update the table. Bound the D-Bus calls, and read the
